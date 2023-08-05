@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "553702142569",
+    "project_id": "decoration-c1d7f",
+    "storage_bucket": "decoration-c1d7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553702142569:android:7a7e229ec18badbb2f28f8",
+        "android_client_info": {
+          "package_name": "com.example.contruction0"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553702142569-1qq1a5n1tn4rg6h6j7bkgvql4cfu98ct.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSUA8K_GXQ0eFRKPhFpFz9vOJ08lUqmKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553702142569-1qq1a5n1tn4rg6h6j7bkgvql4cfu98ct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
