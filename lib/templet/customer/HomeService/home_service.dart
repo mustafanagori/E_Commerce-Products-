@@ -32,7 +32,7 @@ class _HomeServiceState extends State<HomeService> {
             },
             icon: const Icon(Icons.arrow_back),
             color: Colors.black),
-        title: const TextStyleWidget(text: "Home Service", fontSize: 22),
+        title: const TextStyleWidget(text: "Home Service", fontSize: 16),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
@@ -40,7 +40,7 @@ class _HomeServiceState extends State<HomeService> {
               icon: const Icon(
                 Icons.call,
                 color: Colors.blue,
-                size: 25,
+                size: 22,
               ),
               color: Colors.black),
         ],
@@ -52,7 +52,7 @@ class _HomeServiceState extends State<HomeService> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            const TextStyleWidget(text: "All services", fontSize: 20),
+            const TextStyleWidget(text: "Our  services", fontSize: 16),
 
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,

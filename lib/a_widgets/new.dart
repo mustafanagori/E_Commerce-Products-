@@ -3,13 +3,13 @@ import 'package:contruction0/a_widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ServiceCardWidget extends StatelessWidget {
+class ServiceCardWidget2 extends StatelessWidget {
   final String image;
   final String title;
   final String des;
   final int price;
 
-  const ServiceCardWidget({
+  const ServiceCardWidget2({
     required this.image,
     required this.title,
     required this.des,
@@ -85,7 +85,7 @@ class ServiceCardWidget extends StatelessWidget {
                         ),
                         const TextStyleWidget(
                           fontSize: 12,
-                          text: "ADD",
+                          text: "Qty: 1",
                         ),
                       ],
                     )

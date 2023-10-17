@@ -16,16 +16,16 @@ class OrderDetails extends StatelessWidget {
           title: const TabBar(
             dividerColor: Colors.black,
             labelColor: Colors.white,
-            indicatorColor: Colors.yellow,
+            indicatorColor: Colors.grey,
             tabs: [
               Tab(
                 child: Text(
                   "Order",
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 16),
                 ),
               ),
               Tab(
-                child: Text("Schedule", style: TextStyle(fontSize: 18)),
+                child: Text("Schedule", style: TextStyle(fontSize: 16)),
               ),
             ],
           ),

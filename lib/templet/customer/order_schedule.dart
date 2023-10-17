@@ -18,13 +18,15 @@ class OrderSchedule extends StatelessWidget {
           children: [
             const Text(
               "No Schedule Yet",
-              style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
             ),
             ElevatedButton(
                 onPressed: () {
                   Get.to(const HomeService());
                 },
-                child: const Text("Book Now"))
+                child: const Text(
+                  "Book Now",
+                ))
           ],
         ),
       ),

@@ -24,7 +24,7 @@ class TextStyleWidget extends StatelessWidget {
           textStyle: TextStyle(
             color: color,
             fontSize: fontSize,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.normal,
           ),
         ),
       ),

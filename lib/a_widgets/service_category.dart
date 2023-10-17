@@ -51,8 +51,8 @@ class ServicesCategory extends StatelessWidget {
           AutoSizeText(
             text,
             style: GoogleFonts.acme(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
             ),
             minFontSize: 8,
             maxLines: 1,

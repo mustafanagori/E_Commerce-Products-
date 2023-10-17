@@ -69,9 +69,9 @@ class _CustumerProfileState extends State<CustumerProfile> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: const Text(
-            "Customer Profile.",
+            "My Profile",
             style: TextStyle(
-                fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
         ),
@@ -85,24 +85,24 @@ class _CustumerProfileState extends State<CustumerProfile> {
                   image: const AssetImage("assets/sofa/1sofa.jpg"))),
           child: ListView(children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.03,
+              height: MediaQuery.of(context).size.height * 0.16,
             ),
-            GestureDetector(
-              onTap: changeImage,
-              child: Center(
-                child: CircleAvatar(
-                  radius: 60,
-                  backgroundImage: AssetImage(currentImage),
-                ),
-              ),
-            ),
+            // GestureDetector(
+            //   onTap: changeImage,
+            //   child: Center(
+            //     child: CircleAvatar(
+            //       radius: 60,
+            //       backgroundImage: AssetImage(currentImage),
+            //     ),
+            //   ),
+            // ),
             const Padding(
               padding: EdgeInsets.only(top: 40, left: 6),
               child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Name:",
-                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                    style: TextStyle(color: Colors.grey, fontSize: 16),
                   )),
             ),
             Padding(
@@ -111,7 +111,7 @@ class _CustumerProfileState extends State<CustumerProfile> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     name,
-                    style: const TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 16),
                   )),
             ),
             const Divider(),
@@ -121,7 +121,7 @@ class _CustumerProfileState extends State<CustumerProfile> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Email',
-                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                    style: TextStyle(color: Colors.grey, fontSize: 16),
                   )),
             ),
             Padding(
@@ -130,7 +130,7 @@ class _CustumerProfileState extends State<CustumerProfile> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     email,
-                    style: const TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 14),
                   )),
             ),
             const Divider(),
@@ -140,7 +140,7 @@ class _CustumerProfileState extends State<CustumerProfile> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Phone Number',
-                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                    style: TextStyle(color: Colors.grey, fontSize: 16),
                   )),
             ),
             Padding(
@@ -149,7 +149,7 @@ class _CustumerProfileState extends State<CustumerProfile> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     contact,
-                    style: const TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 16),
                   )),
             ),
             const Divider(),
@@ -159,7 +159,7 @@ class _CustumerProfileState extends State<CustumerProfile> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Address',
-                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                    style: TextStyle(color: Colors.grey, fontSize: 16),
                   )),
             ),
             Padding(
@@ -168,12 +168,12 @@ class _CustumerProfileState extends State<CustumerProfile> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     address,
-                    style: const TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 16),
                   )),
             ),
             const Divider(),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.12,
+              height: MediaQuery.of(context).size.height * 0.16,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),

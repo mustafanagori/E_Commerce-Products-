@@ -1,8 +1,8 @@
+import 'package:contruction0/a_widgets/new.dart';
 import 'package:contruction0/templet/customer/customer_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../a_widgets/service_card.dart';
 import '../../../../a_widgets/text.dart';
 import '../../../../core/utlis.dart';
 
@@ -34,11 +34,11 @@ class Order extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        TextStyleWidget(text: "Address", fontSize: 15),
+                        TextStyleWidget(text: "Address", fontSize: 14),
                         TextStyleWidget(
                             text:
-                                "Al-Khaleej floor 5 office 505 Tower badurabad karachi ",
-                            fontSize: 14),
+                                "office 505  Al-KhaleejTower badurabad karachi ",
+                            fontSize: 12),
                       ],
                     ),
                   ),
@@ -47,10 +47,11 @@ class Order extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
-              const TextStyleWidget(text: "Service List", fontSize: 17),
+              const TextStyleWidget(
+                  text: "choosen Service's List", fontSize: 14),
               const Padding(
                 padding: EdgeInsets.only(top: 10),
-                child: ServiceCardWidget(
+                child: ServiceCardWidget2(
                     image: "assets/sofa/1sofa.jpg",
                     title: "Sofa Cleaning",
                     des: "Single Sofa Cleaning  ",
@@ -58,7 +59,7 @@ class Order extends StatelessWidget {
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 10),
-                child: ServiceCardWidget(
+                child: ServiceCardWidget2(
                     image: "assets/chair/6chair.jpg",
                     title: "Chair Cleaning",
                     des: "Single chair Cleaning  ",
@@ -84,8 +85,8 @@ class Order extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             TextStyleWidget(
-                                text: "Sofa Cleaning", fontSize: 15),
-                            TextStyleWidget(text: "300 * 1", fontSize: 15),
+                                text: "Sofa Cleaning", fontSize: 12),
+                            TextStyleWidget(text: "300 * 1", fontSize: 12),
                           ],
                         ),
                       ),
@@ -95,8 +96,8 @@ class Order extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             TextStyleWidget(
-                                text: "Chair Cleaning", fontSize: 15),
-                            TextStyleWidget(text: "450 * 1", fontSize: 15),
+                                text: "Chair Cleaning", fontSize: 12),
+                            TextStyleWidget(text: "450 * 1", fontSize: 12),
                           ],
                         ),
                       ),
@@ -108,8 +109,8 @@ class Order extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            TextStyleWidget(text: "Total Price", fontSize: 15),
-                            TextStyleWidget(text: "750", fontSize: 15),
+                            TextStyleWidget(text: "Total Price", fontSize: 12),
+                            TextStyleWidget(text: "750/-", fontSize: 12),
                           ],
                         ),
                       ),
@@ -135,8 +136,8 @@ class Order extends StatelessWidget {
                     },
                     child: const Text(
                       "Place Order",
-                      style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 14, fontWeight: FontWeight.normal),
                     ),
                   ),
                 ),

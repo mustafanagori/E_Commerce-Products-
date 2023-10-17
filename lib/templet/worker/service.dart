@@ -110,14 +110,14 @@ class _ServiceScreenState extends State<ServiceScreen> {
                 const Text(
                   'Edit Product Details',
                   style: TextStyle(
-                      fontSize: 24.0,
+                      fontSize: 14.0,
                       color: Colors.blue,
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 20.0),
                 TextFormField(
                   controller: _serviceNameController,
-                  decoration: InputDecoration(labelText: 'Product Name'),
+                  decoration: InputDecoration(labelText: 'Service Name'),
                 ),
                 TextFormField(
                   controller: _serviceDesController,
@@ -126,17 +126,17 @@ class _ServiceScreenState extends State<ServiceScreen> {
                 ),
                 TextFormField(
                   controller: _cpController,
-                  decoration: InputDecoration(labelText: 'Product CP'),
+                  decoration: InputDecoration(labelText: 'Service CP'),
                   keyboardType: TextInputType.number,
                 ),
                 TextFormField(
                   controller: _ypController,
-                  decoration: InputDecoration(labelText: 'Product YP'),
+                  decoration: InputDecoration(labelText: 'Service YP'),
                   keyboardType: TextInputType.number,
                 ),
                 TextFormField(
                   controller: _itemcodeController,
-                  decoration: InputDecoration(labelText: 'Product Item Code'),
+                  decoration: InputDecoration(labelText: 'Service Code'),
                   keyboardType: TextInputType.number,
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
@@ -144,11 +144,11 @@ class _ServiceScreenState extends State<ServiceScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     const Text(
-                      "Update Product Image",
+                      "Update Service Image",
                       style: TextStyle(
                           color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
+                          fontWeight: FontWeight.normal,
+                          fontSize: 14),
                     ),
                     SizedBox(width: MediaQuery.of(context).size.width * 0.03),
                     IconButton(
@@ -312,11 +312,11 @@ class _ServiceScreenState extends State<ServiceScreen> {
                 return SingleChildScrollView(
                   child: AlertDialog(
                     title: const Text(
-                      'Add Service',
+                      'Add new Service',
                       style: TextStyle(
                         color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 12,
                       ),
                     ),
                     content: Column(
@@ -324,30 +324,30 @@ class _ServiceScreenState extends State<ServiceScreen> {
                         TextFormField(
                           controller: _serviceNameController,
                           decoration:
-                              const InputDecoration(labelText: 'Product Name'),
+                              const InputDecoration(labelText: 'Service Name'),
                         ),
                         TextFormField(
                           controller: _serviceDesController,
                           decoration: const InputDecoration(
-                              labelText: 'Product Description'),
+                              labelText: 'Service Description'),
                           keyboardType: TextInputType.number,
                         ),
                         TextFormField(
                           controller: _itemcodeController,
                           decoration:
-                              const InputDecoration(labelText: 'Item Code'),
+                              const InputDecoration(labelText: 'service Code'),
                           keyboardType: TextInputType.name,
                         ),
                         TextFormField(
                           controller: _cpController,
                           decoration: const InputDecoration(
-                              labelText: 'Enter Product C.P'),
+                              labelText: 'Enter service C.P'),
                           keyboardType: TextInputType.name,
                         ),
                         TextFormField(
                           controller: _ypController,
                           decoration: const InputDecoration(
-                              labelText: 'Enter Product Y.P'),
+                              labelText: 'Enter service Y.P'),
                           keyboardType: TextInputType.name,
                         ),
                         SizedBox(
@@ -356,10 +356,10 @@ class _ServiceScreenState extends State<ServiceScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             const Text(
-                              "Select Product Image",
+                              "Select service Image",
                               style: TextStyle(
                                   color: Colors.blue,
-                                  fontWeight: FontWeight.bold),
+                                  fontWeight: FontWeight.normal),
                             ),
                             SizedBox(
                                 width:
@@ -368,7 +368,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                               onPressed: _pickImage,
                               icon: const Icon(
                                 Icons.upload,
-                                size: 30,
+                                size: 24,
                                 color: Colors.green,
                               ),
                             ),
@@ -385,12 +385,13 @@ class _ServiceScreenState extends State<ServiceScreen> {
                               ? Center(
                                   child: Text(
                                   "image selected",
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 12),
                                 ))
                               : Center(
-                                  child: Text("upload image",
+                                  child: Text("Upload service image",
                                       style: TextStyle(
-                                          color: Colors.white, fontSize: 20))),
+                                          color: Colors.white, fontSize: 12))),
                         )
                       ],
                     ),
@@ -445,7 +446,10 @@ class _ServiceScreenState extends State<ServiceScreen> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           elevation: 5,
-          title: const Text("Manage Products"),
+          title: const Text(
+            "worker service's",
+            style: TextStyle(fontSize: 16),
+          ),
           centerTitle: true,
         ),
         body: StreamBuilder<QuerySnapshot>(
@@ -512,8 +516,8 @@ class _ServiceScreenState extends State<ServiceScreen> {
                                   AutoSizeText(
                                     "Woker Name : ${name}",
                                     style: GoogleFonts.abel(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.normal,
                                       color: Colors.black,
                                     ),
                                     minFontSize: 8,
@@ -523,17 +527,21 @@ class _ServiceScreenState extends State<ServiceScreen> {
                                   Divider(),
                                   Row(
                                     children: [
-                                      Text('C.P. =  $cp'),
+                                      Text(
+                                        'C.P. =  $cp',
+                                        style: TextStyle(fontSize: 12),
+                                      ),
                                       const Text("       "),
-                                      Text('Y.C. = $yp')
+                                      Text('Y.C. = $yp',
+                                          style: TextStyle(fontSize: 12))
                                     ],
                                   ),
                                   const Divider(),
                                   AutoSizeText(
                                     "Item Code :  $itemcode",
                                     style: GoogleFonts.acme(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.normal,
                                     ),
                                     minFontSize: 8,
                                     maxLines: 2,
@@ -543,36 +551,43 @@ class _ServiceScreenState extends State<ServiceScreen> {
                                   AutoSizeText(
                                     "Product Name :  $serviceName",
                                     style: GoogleFonts.acme(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.normal,
                                     ),
                                     minFontSize: 8,
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
                                   ),
+                                  // Divider(),
                                   AutoSizeText(
                                     "Des:   $des",
                                     style: GoogleFonts.abel(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.normal,
                                       color: Colors.blue,
                                     ),
                                     minFontSize: 8,
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
                                   ),
+                                  // Divider(),
                                   Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       TextStyleWidget(
-                                        fontSize: 18,
+                                        fontSize: 12,
                                         // text: "Rs ${cp.toStringAsFixed(1)}",
                                         text: "Rs $cp",
                                         color: Colors.green,
                                       ),
                                       Spacer(),
-                                      Text("Edit"),
+                                      const Text(
+                                        "Edit",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                        ),
+                                      ),
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(bottom: 5),
@@ -583,7 +598,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                                             },
                                             icon: const Icon(
                                               Icons.edit_attributes,
-                                              size: 40,
+                                              size: 24,
                                               color: Colors.green,
                                             )),
                                       ),
@@ -592,7 +607,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                                               _deleteService(documentId),
                                           icon: const Icon(
                                             Icons.delete,
-                                            size: 30,
+                                            size: 22,
                                             color: Colors.red,
                                           )),
                                     ],

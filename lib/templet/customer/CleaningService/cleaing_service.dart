@@ -29,7 +29,7 @@ class _CleaningServiceState extends State<CleaningService> {
             },
             icon: const Icon(Icons.arrow_back),
             color: Colors.black),
-        title: const TextStyleWidget(text: "Cleaning Service", fontSize: 22),
+        title: const TextStyleWidget(text: "Cleaning Service", fontSize: 16),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
@@ -37,7 +37,7 @@ class _CleaningServiceState extends State<CleaningService> {
               icon: const Icon(
                 Icons.call,
                 color: Colors.blue,
-                size: 25,
+                size: 22,
               ),
               color: Colors.black),
         ],
@@ -49,7 +49,7 @@ class _CleaningServiceState extends State<CleaningService> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            const TextStyleWidget(text: "All Services Available", fontSize: 20),
+            const TextStyleWidget(text: "our  Services", fontSize: 14),
 
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,

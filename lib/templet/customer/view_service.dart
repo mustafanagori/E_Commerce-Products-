@@ -21,7 +21,10 @@ class _ViewServiceState extends State<ViewService> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           elevation: 5,
-          title: const Text("View Available Services.."),
+          title: const Text(
+            "Available Services",
+            style: TextStyle(fontSize: 16),
+          ),
           centerTitle: true,
         ),
         body: StreamBuilder<QuerySnapshot>(
@@ -53,11 +56,11 @@ class _ViewServiceState extends State<ViewService> {
                       if (workerSnapshot.connectionState ==
                           ConnectionState.waiting) {
                         // Return a loading indicator while waiting for the worker data
-                        return Center(
-                          child: CircularProgressIndicator(
-                            color: Colors.blue,
-                          ),
-                        );
+                        // return Center(
+                        //   child: CircularProgressIndicator(
+                        //     color: Colors.blue,
+                        //   ),
+                        // );
                       }
 
                       if (workerSnapshot.hasError) {
@@ -112,7 +115,7 @@ class _ViewServiceState extends State<ViewService> {
                                       AutoSizeText(
                                         "Woker Name : ${workerName}",
                                         style: GoogleFonts.abel(
-                                          fontSize: 15,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black,
                                         ),
@@ -123,17 +126,21 @@ class _ViewServiceState extends State<ViewService> {
                                       Divider(),
                                       Row(
                                         children: [
-                                          Text('C.P. =  $cp'),
+                                          Text(
+                                            'C.P. =  $cp',
+                                            style: TextStyle(fontSize: 12),
+                                          ),
                                           const Text("       "),
-                                          Text('Y.C. = $yp')
+                                          Text('Y.C. = $yp',
+                                              style: TextStyle(fontSize: 12))
                                         ],
                                       ),
                                       const Divider(),
                                       AutoSizeText(
                                         "Item Code :  $itemcode",
                                         style: GoogleFonts.acme(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.normal,
                                         ),
                                         minFontSize: 8,
                                         maxLines: 2,
@@ -143,17 +150,18 @@ class _ViewServiceState extends State<ViewService> {
                                       AutoSizeText(
                                         "Product Name :  $serviceName",
                                         style: GoogleFonts.acme(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.normal,
                                         ),
                                         minFontSize: 8,
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
                                       ),
+                                      Divider(),
                                       AutoSizeText(
                                         "Des:   $des",
                                         style: GoogleFonts.abel(
-                                          fontSize: 15,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.blue,
                                         ),
@@ -161,12 +169,13 @@ class _ViewServiceState extends State<ViewService> {
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
                                       ),
+                                      Divider(),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           TextStyleWidget(
-                                            fontSize: 18,
+                                            fontSize: 12,
                                             // text: "Rs ${cp.toStringAsFixed(1)}",
                                             text: "Rs $cp",
                                             color: Colors.green,

@@ -28,7 +28,7 @@ class WorkerHome extends StatelessWidget {
           leading: IconButton(
             onPressed: () {},
             icon: const Icon(Icons.circle_notifications),
-            iconSize: 30,
+            iconSize: 22,
             color: Colors.deepPurpleAccent,
           ),
           // actions: [
@@ -50,7 +50,7 @@ class WorkerHome extends StatelessWidget {
             children: [
               TextStyleWidget(
                 text: "Dashboard Panel For Worker",
-                fontSize: 18,
+                fontSize: 14,
               ),
               Text('Al-Khaleej Tower badurabad karachi..',
                   style: TextStyle(fontSize: 14, color: Colors.black)),

@@ -28,11 +28,11 @@ class CustomerHome extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextStyleWidget(
-                text: "Dashboard Panel Customer",
-                fontSize: 18,
+                text: "Dashboard Panel ",
+                fontSize: 14,
               ),
-              Text('Al-Khaleej Tower badurabad karachi..',
-                  style: TextStyle(fontSize: 14, color: Colors.black)),
+              Text('Office 505 Al-Khaleej Tower badurabad karachi..',
+                  style: TextStyle(fontSize: 10, color: Colors.black)),
             ],
           ),
           backgroundColor: Colors.white,
@@ -42,20 +42,20 @@ class CustomerHome extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            const TextStyleWidget(
-              text: "<-Wellcome to King Company ->",
-              fontSize: 25,
-              color: Colors.green,
+            TextStyleWidget(
+              text: "Wellcome to Darul Solution",
+              fontSize: 18,
+              color: Colors.grey.shade600,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
             AutoSizeText(
-              "Hellow Ghulam Mustafa",
+              "Hellow,  Muhammad Raza",
               style: GoogleFonts.acme(
                 textStyle: const TextStyle(
                   color: Colors.blueAccent,
-                  fontSize: 20,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -115,7 +115,7 @@ class SerivceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.22,
-      width: MediaQuery.of(context).size.width * 0.45,
+      width: MediaQuery.of(context).size.width * 0.48,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         boxShadow: const [
@@ -133,7 +133,7 @@ class SerivceCard extends StatelessWidget {
             style: GoogleFonts.acme(
               textStyle: const TextStyle(
                 color: Colors.black,
-                fontSize: 17,
+                fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -157,7 +157,7 @@ class SerivceCard extends StatelessWidget {
                   fit: BoxFit.fitWidth,
                   child: Text(
                     "Residental",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color: Colors.black, fontSize: 10),
                   ),
                 ),
               ),
@@ -177,7 +177,7 @@ class SerivceCard extends StatelessWidget {
                   fit: BoxFit.cover,
                   child: Text(
                     "COMMERICAL",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color: Colors.black, fontSize: 10),
                   ),
                 ),
               ),
