@@ -15,7 +15,7 @@ class ForgotPassword extends StatelessWidget {
         appBar: AppBar(
           title: const Text(
             "Forgot password",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(),
           ),
           backgroundColor: Colors.deepPurpleAccent,
           centerTitle: true,
@@ -49,42 +49,45 @@ class ForgotPassword extends StatelessWidget {
                       focusedBorder: OutlineInputBorder(
                         borderSide:
                             const BorderSide(color: Colors.deepPurpleAccent),
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
                             const BorderSide(color: Colors.deepPurpleAccent),
-                        borderRadius: BorderRadius.circular(18),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        elevation: 8,
-                        fixedSize: const Size(180, 40),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.7,
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          elevation: 8,
+                          fixedSize: const Size(180, 40),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
                         ),
-                      ),
-                      onPressed: () async {
-                        var forgotemail = forgotController.text.trim();
+                        onPressed: () async {
+                          var forgotemail = forgotController.text.trim();
 
-                        try {
-                          await FirebaseAuth.instance
-                              .sendPasswordResetEmail(email: forgotemail)
-                              .then((value) => {
-                                    Utils().toastMessage('Email send !'),
-                                    Get.to(() => const Login()),
-                                  });
-                        } on FirebaseAuthException catch (e) {
-                          Utils().toastMessage("$e");
-                        }
-                      },
-                      child: const Text(
-                        "Reset Password !",
-                        style: TextStyle(fontSize: 17),
-                      )),
+                          try {
+                            await FirebaseAuth.instance
+                                .sendPasswordResetEmail(email: forgotemail)
+                                .then((value) => {
+                                      Utils().toastMessage('Email send !'),
+                                      Get.to(() => const Login()),
+                                    });
+                          } on FirebaseAuthException catch (e) {
+                            Utils().toastMessage("$e");
+                          }
+                        },
+                        child: const Text(
+                          "Reset Password !",
+                          style: TextStyle(fontSize: 17),
+                        )),
+                  ),
                 ],
               ),
             ),

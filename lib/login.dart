@@ -27,9 +27,10 @@ class _LoginState extends State<Login> {
           automaticallyImplyLeading: false,
           backgroundColor: Colors.deepPurpleAccent,
           title: const Text(
-            "King Contruction",
+            "Darul Contruction",
             style: TextStyle(
-                color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+              color: Colors.white,
+            ),
           ),
           centerTitle: true,
         ),
@@ -56,14 +57,14 @@ class _LoginState extends State<Login> {
                       height: MediaQuery.of(context).size.height * 0.1,
                     ),
                     const Text(
-                      "Login Now !",
+                      "Login Now",
                       style: TextStyle(
-                          fontSize: 35,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white70),
+                          color: Colors.black38),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.1,
+                      height: MediaQuery.of(context).size.height * 0.12,
                     ),
                     TextFormField(
                       controller: emailController,
@@ -74,13 +75,14 @@ class _LoginState extends State<Login> {
                         contentPadding: const EdgeInsets.only(
                             left: 14.0, bottom: 12.0, top: 12.0),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(20),
+                          borderSide:
+                              const BorderSide(color: Colors.deepPurpleAccent),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
                               const BorderSide(color: Colors.deepPurpleAccent),
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                       keyboardType: TextInputType.emailAddress,
@@ -112,12 +114,12 @@ class _LoginState extends State<Login> {
                         focusedBorder: OutlineInputBorder(
                           borderSide:
                               const BorderSide(color: Colors.deepPurpleAccent),
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
                               const BorderSide(color: Colors.deepPurpleAccent),
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                         suffixIcon: IconButton(
                           onPressed: () {
@@ -141,16 +143,16 @@ class _LoginState extends State<Login> {
                       },
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.2,
+                      height: MediaQuery.of(context).size.height * 0.18,
                     ),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.06,
-                      width: double.infinity,
+                      width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.deepPurpleAccent,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(10),
                             ),
                           ),
                           onPressed: () async {
@@ -178,7 +180,7 @@ class _LoginState extends State<Login> {
                           child: const Text(
                             "Login",
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 20,
                             ),
                           )),
                     ),
@@ -191,7 +193,7 @@ class _LoginState extends State<Login> {
                         const Text(
                           "Don't have an account  ",
                           style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 14,
                               fontWeight: FontWeight.bold,
                               color: Colors.black),
                         ),
@@ -200,10 +202,10 @@ class _LoginState extends State<Login> {
                             Get.to(() => SignUp());
                           },
                           child: const Text(
-                            "Sign Up Now",
+                            "  Sign Up",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 15,
+                              fontSize: 12,
                               color: Colors.deepPurpleAccent,
                             ),
                           ),
@@ -221,7 +223,7 @@ class _LoginState extends State<Login> {
                         "Forget Password",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 15,
+                          fontSize: 14,
                           color: Colors.deepPurpleAccent,
                         ),
                       ),

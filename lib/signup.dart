@@ -84,8 +84,7 @@ class _SignUpState extends State<SignUp> {
                               const Text(
                                 "Register Now",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
+                                  color: Colors.black45,
                                   fontSize: 40,
                                 ),
                               ),
@@ -99,18 +98,19 @@ class _SignUpState extends State<SignUp> {
                                   filled: true,
                                   fillColor: Colors.white,
                                   hintText: 'Email',
-                                  enabled: true,
                                   contentPadding: const EdgeInsets.only(
                                       left: 16.0, bottom: 8.0, top: 8.0),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: const BorderSide(
                                         color: Colors.deepPurpleAccent),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                  enabledBorder: UnderlineInputBorder(
+                                  enabledBorder: OutlineInputBorder(
+                                    // Set the border for the normal state
                                     borderSide: const BorderSide(
-                                        color: Colors.deepPurpleAccent),
-                                    borderRadius: BorderRadius.circular(20),
+                                        color: Colors
+                                            .deepPurpleAccent), // Change this color for the normal state
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
                                 ),
                                 validator: (value) {
@@ -155,12 +155,16 @@ class _SignUpState extends State<SignUp> {
                                   contentPadding: const EdgeInsets.only(
                                       left: 14.0, bottom: 8.0, top: 15.0),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderSide: const BorderSide(
+                                        color: Colors.deepPurpleAccent),
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                  enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                  enabledBorder: OutlineInputBorder(
+                                    // Set the border for the normal state
+                                    borderSide: const BorderSide(
+                                        color: Colors
+                                            .deepPurpleAccent), // Change this color for the normal state
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
                                 ),
                                 validator: (value) {
@@ -203,12 +207,16 @@ class _SignUpState extends State<SignUp> {
                                   contentPadding: const EdgeInsets.only(
                                       left: 14.0, bottom: 8.0, top: 15.0),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderSide: const BorderSide(
+                                        color: Colors.deepPurpleAccent),
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                  enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                  enabledBorder: OutlineInputBorder(
+                                    // Set the border for the normal state
+                                    borderSide: const BorderSide(
+                                        color: Colors
+                                            .deepPurpleAccent), // Change this color for the normal state
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
                                 ),
                                 validator: (value) {
@@ -229,9 +237,9 @@ class _SignUpState extends State<SignUp> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Rool : ",
+                                    "Select Rool   ",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black,
                                     ),
@@ -251,7 +259,7 @@ class _SignUpState extends State<SignUp> {
                                           style: const TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 20,
+                                            fontSize: 17,
                                           ),
                                         ),
                                       );
@@ -279,7 +287,7 @@ class _SignUpState extends State<SignUp> {
                                   MaterialButton(
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
-                                            Radius.circular(20.0))),
+                                            Radius.circular(10.0))),
                                     elevation: 5.0,
                                     height: MediaQuery.of(context).size.height *
                                         0.03,
@@ -295,9 +303,7 @@ class _SignUpState extends State<SignUp> {
                                     child: Text(
                                       "Login",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20,
-                                          color: Colors.white),
+                                          fontSize: 17, color: Colors.white),
                                     ),
                                     color: Colors.deepPurpleAccent,
                                     padding: EdgeInsets.all(8),
@@ -305,7 +311,7 @@ class _SignUpState extends State<SignUp> {
                                   MaterialButton(
                                       shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(20.0))),
+                                              Radius.circular(10.0))),
                                       elevation: 5.0,
                                       height:
                                           MediaQuery.of(context).size.height *
@@ -327,9 +333,9 @@ class _SignUpState extends State<SignUp> {
                                       child: const Text(
                                         "Register",
                                         style: TextStyle(
-                                            fontSize: 20,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
+                                          fontSize: 18,
+                                          color: Colors.white,
+                                        ),
                                       )),
                                 ],
                               ),

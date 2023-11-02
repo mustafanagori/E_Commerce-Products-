@@ -10,7 +10,7 @@ class WorkerHome extends StatelessWidget {
   final List<String> imageUrls = [
     "https://www.sanitary.pk/admin/assets/uploaded_images/51BpG1Z4XUL__AC_SL1000_.jpg",
     "https://static-01.daraz.pk/p/4d37ae8112edf894eaee087e975d84e9.png",
-    "https://techmanistan.pk/wp-content/uploads/2022/10/5341b19a0b11407d13a3e86744b1c4e0-jpg.webp",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXaKY3n46ILjJCqLluMXAYhgmK_M2LP6kflvYQjMc&s",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjyC84B6E-a86zvMq0U3u_6HSRR15J6FZWiJxXUubeZeN17zRwdVrrtaZENuza9yaPiD8&usqp=CAU",
   ];
 
@@ -27,9 +27,9 @@ class WorkerHome extends StatelessWidget {
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.circle_notifications),
-            iconSize: 22,
-            color: Colors.deepPurpleAccent,
+            icon: const Icon(Icons.access_alarm),
+            iconSize: 25,
+            color: Colors.black,
           ),
           // actions: [
           //   IconButton(
@@ -67,7 +67,7 @@ class WorkerHome extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(10.0),
               child: TextStyleWidget(
-                text: "Wellcome to King Company ",
+                text: "Wellcome to Darul Company ",
                 fontSize: 25,
                 color: Color.fromARGB(255, 123, 135, 129),
               ),
@@ -108,33 +108,33 @@ class WorkerHome extends StatelessWidget {
                         color: Colors.black38,
                         borderRadius: BorderRadius.circular(20.0),
                       ),
-                      child: Stack(
-                        children: [
+                      child:
+                          //Stack(
+
+                          //  children: [
                           ClipRRect(
-                            borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(20.0),
-                                topRight: Radius.circular(20.0)),
-                            child: Image.network(
-                              imageUrl,
-                              fit: BoxFit.fill,
-                              height: MediaQuery.of(context).size.height * 0.28,
-                              width: double.infinity,
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 5,
-                            left: 50,
-                            child: Text(
-                              text,
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: Image.network(
+                          imageUrl,
+                          fit: BoxFit.fill,
+                          height: MediaQuery.of(context).size.height * 0.28,
+                          width: double.infinity,
+                        ),
                       ),
+                      // Positioned(
+                      //   bottom: 5,
+                      //   left: 50,
+                      //   child: Text(
+                      //     text,
+                      //     style: const TextStyle(
+                      //       color: Colors.white,
+                      //       fontSize: 20,
+                      //       fontWeight: FontWeight.bold,
+                      //     ),
+                      //   ),
+                      // ),
+                      // ],
+                      //),
                     );
                   },
                 );
